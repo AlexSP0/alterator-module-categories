@@ -7,3 +7,4 @@ interface_name = categories
 [Info]
 execute = bash /usr/share/alterator/scripts/categories_info.sh /usr/share/alterator/categories/ /usr/share/alterator/desktop-directories/ {name}
 stdout_bytes = enabled
+action_id = Info

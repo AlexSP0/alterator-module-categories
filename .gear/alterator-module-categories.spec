@@ -26,7 +26,7 @@ mkdir -p %buildroot%{_datadir}/alterator/backends
 mkdir -p %buildroot%{_datadir}/alterator/scripts
 
 install -v -p -m 644 -D ru.basealt.alterator.categories.xml %buildroot%{_datadir}/dbus-1/interfaces
-install -v -p -m 644 -D 47-alterator-module-categories.rules %buildroot%{_sysconfdir}/polkit-1/rules.d
+install -v -p -m 644 -D 49-alterator-module-categories.rules %buildroot%{_sysconfdir}/polkit-1/rules.d
 install -v -p -m 644 -D categories.backend %buildroot%{_datadir}/alterator/backends
 install -v -p -m 755 -D *.sh %buildroot%{_datadir}/alterator/scripts
 
@@ -34,7 +34,7 @@ install -v -p -m 755 -D *.sh %buildroot%{_datadir}/alterator/scripts
 %{_datadir}/alterator/backends/categories.backend
 %{_datadir}/alterator/scripts/*.sh
 %{_datadir}/dbus-1/interfaces/ru.basealt.alterator.categories.xml
-%{_sysconfdir}/polkit-1/rules.d/47-alterator-module-categories.rules
+%{_sysconfdir}/polkit-1/rules.d/49-alterator-module-categories.rules
 
 %changelog
 * Tue Oct 24 2023 Aleksey Saprunov <sav@altlinux.org> 0.1.0-alt1
