@@ -2,9 +2,9 @@
 module_name = executor
 node_name = categories
 
-interface_name = categories
+interface_name = category
 
 [Info]
-execute = bash /usr/share/alterator/scripts/categories_info.sh /usr/share/alterator/categories/ /usr/share/alterator/desktop-directories/ {name}
+execute = sh /usr/share/alterator/scripts/category-info.sh {name}
 stdout_bytes = enabled
 action_id = Info
