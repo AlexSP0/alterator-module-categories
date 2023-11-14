@@ -8,3 +8,8 @@ interface_name = category
 execute = sh /usr/share/alterator/scripts/category-info.sh {name}
 stdout_bytes = enabled
 action_id = Info
+
+[List]
+execute = sh /usr/share/alterator/scripts/list-categories.sh
+stdout_bytes = enabled
+action_id = List

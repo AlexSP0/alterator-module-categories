@@ -1,2 +1,2 @@
-spec: .gear/alterator-module-categories.spec
+spec: alterator-module-categories.spec
 tar: .

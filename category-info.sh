@@ -29,6 +29,6 @@ output="[Alterator Entry]"
 output=`echo -e "$output\nObjects=$desktop_name"`
 output=`echo -e "$output\n\n[Alterator $desktop_name]"`
 output=`echo -e "$output\n$desktop_entry_body"`
-output=`echo -e "$output" | sed "s/\(\s*Type\s*=\s*\).*/\1$new_type/i"`
+output=`echo -e "$output" | sed "s/\(\s*Type\s*=\s*\).*/\1Category/i"`
 
 echo "$output"
