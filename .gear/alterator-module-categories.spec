@@ -39,6 +39,7 @@ install -v -p -m 755 -D *.sh %buildroot%{_datadir}/alterator/scripts
 %changelog
 * Mon Nov 13 2023 Aleksey Saprunov <sav@altlinux.org> 0.1.1-alt1
 - convert desktop files into new alterator format
+- add list method
 
 * Tue Oct 24 2023 Aleksey Saprunov <sav@altlinux.org> 0.1.0-alt1
 - initial build
