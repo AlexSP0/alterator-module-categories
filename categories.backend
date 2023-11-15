@@ -11,5 +11,5 @@ action_id = Info
 
 [List]
 execute = sh /usr/share/alterator/scripts/list-categories.sh
-stdout_bytes = enabled
+stdout_strings = enabled
 action_id = List

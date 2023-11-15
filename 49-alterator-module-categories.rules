@@ -1,8 +1,11 @@
 polkit.addRule(function(action, subject) {
-	if (action.id == "ru.basealt.alterator.categories.Info") {
+    if (action.id == "ru.basealt.alterator.category.Info") {
         return polkit.Result.YES;
     }
-	if (action.id == "ru.basealt.alterator.categories") {
+    if (action.id == "ru.basealt.alterator.category.List") {
+        return polkit.Result.YES;
+    }
+    if (action.id == "ru.basealt.alterator.category") {
         return polkit.Result.YES;
     }
 });
