@@ -1,8 +1,8 @@
 [Manager]
 module_name = executor
-node_name = categories
+node_name = global
 
-interface_name = category
+interface_name = categories
 
 [Info]
 execute = sh /usr/share/alterator/scripts/category-info.sh {name}
