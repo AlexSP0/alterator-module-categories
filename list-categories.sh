@@ -5,6 +5,6 @@ new_categories_dir="/usr/share/alterator/categories"
 
 sed -n -e "s/X-Alterator-Category\s*=\(.*\)/\1/p" $old_categories_dir/*
 
-grep -s -l -e "Type\s*=\s*Category" $new_categories_dir/* \
-    | xargs sed -n -e "s/\[Alterator \(.*\)\]/\1/p" \
-    | tail -n 1
+grep -s -l -e "\[Alterator Entry\]" $new_categories_dir/*.alterator |
+	xargs grep -l -e "Type\s*=\s*Category" |
+	xargs sed -n -e "s/Name\s*=\s*\(.*\)/\1/p"
