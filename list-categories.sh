@@ -3,9 +3,12 @@
 old_categories_dir="/usr/share/alterator/desktop-directories"
 new_categories_dir="/usr/share/alterator/objects"
 
-sed -n -e "s/X-Alterator-Category\s*=\(.*\)/\1/p" $old_categories_dir/*
+find $old_categories_dir -type f -exec \
+	sed -e "s/X-Alterator-Category\s*=\(.*\)/\1/p" \;
 
+alterator_files=$(find $new_categories_dir -name "*.alterator")
 
-grep -s -l -e "\[Alterator Entry\]" $new_categories_dir/*.alterator |
-    xargs grep -l -e "Type\s*=\s*Category" |
-    xargs sed -n -e "s/Name\s*=\s*\(.*\)/\1/p"
+for file in "$alterator_files"; do
+	grep -q -e "^\s*Type\s*=\s*Category" $file &&
+		sed -n -e "s/s*Name\s*=\(.*\)/\1/p" $file | xargs
+done
