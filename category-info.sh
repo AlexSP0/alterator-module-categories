@@ -4,7 +4,7 @@
 
 old_categories_dir="/usr/share/alterator/desktop-directories"
 new_categories_dir="/usr/share/alterator/categories"
-category=$1
+category=$(echo "$1" | xargs)
 
 file=$(grep -l -s -e "Name\s*=\s*$category" $new_categories_dir/*.alterator |
 	xargs grep -i -l -s -e "Type\s*=\s*Category")
