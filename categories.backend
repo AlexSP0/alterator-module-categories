@@ -1,8 +1,8 @@
-[Manager]
-module_name = executor
-node_name = global
-
-interface_name = categories
+[Alterator Entry]
+Type = Backend
+Module = executor
+Name = global
+Interface = categories
 
 [Info]
 execute = sh /usr/share/alterator/objects/global/scripts/category-info.sh {name}
