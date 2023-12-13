@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 [ $# -ne 1 ] && echo "Usage: $0 <category-name>" && exit 1
 
@@ -19,8 +19,7 @@ file=$(grep -e "\[X-Alterator Category $category\]" \
 
 content=$(cat $file)
 new_body=$(echo "$content" |
-	tail -n +2 |
-	sed "/\s*X-Alterator-Category\s*=.*/d")
+	tail -n +2)
 
 output="[Alterator Entry]"
 output=$(echo -e "$output\n$new_body")

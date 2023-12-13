@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 old_categories_dir="/usr/share/alterator/desktop-directories"
 new_categories_dir="/usr/share/alterator/categories"
