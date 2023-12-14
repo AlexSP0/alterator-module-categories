@@ -2,5 +2,11 @@ polkit.addRule(function(action, subject) {
     if (action.id == "ru.basealt.alterator.categories") {
         return polkit.Result.YES;
     }
+	if (action.id == "ru.basealt.alterator.categories.Info") {
+        return polkit.Result.YES;
+    }
+	if (action.id == "ru.basealt.alterator.categories.List") {
+        return polkit.Result.YES;
+    }
 });
 
