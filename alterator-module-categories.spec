@@ -23,16 +23,18 @@ Object categories interface for alterator browser operating via D-Bus.
 mkdir -p %buildroot%_datadir/dbus-1/interfaces
 mkdir -p %buildroot%_sysconfdir/polkit-1/rules.d
 mkdir -p %buildroot%_sysconfdir/alterator/backends
-mkdir -p %buildroot%_datadir/alterator/objects/global/scripts
+mkdir -p %buildroot%_libexecdir/%name
 
 install -v -p -m 644 -D ru.basealt.alterator.categories.xml %buildroot%_datadir/dbus-1/interfaces
 install -v -p -m 644 -D 49-alterator-module-categories.rules %buildroot%_sysconfdir/polkit-1/rules.d
 install -v -p -m 644 -D categories.backend %buildroot%_sysconfdir/alterator/backends
-install -v -p -m 755 -D *.sh %buildroot%_datadir/alterator/objects/global/scripts
+install -v -p -m 755 -D category-info %buildroot%_libexecdir/%name
+install -v -p -m 755 -D list-categories %buildroot%_libexecdir/%name
 
 %files
 %_sysconfdir/alterator/backends/categories.backend
-%_datadir/alterator/objects/global/scripts/*.sh
+%_libexecdir/%name/category-info
+%_libexecdir/%name/list-categories
 %_datadir/dbus-1/interfaces/ru.basealt.alterator.categories.xml
 %_sysconfdir/polkit-1/rules.d/49-alterator-module-categories.rules
 

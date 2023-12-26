@@ -5,11 +5,11 @@ Name = global
 Interface = categories
 
 [Info]
-execute = sh /usr/share/alterator/objects/global/scripts/category-info.sh {name}
+execute = sh /usr/lib/alterator-module-categories/category-info {name}
 stdout_bytes = enabled
 action_id = Info
 
 [List]
-execute = sh /usr/share/alterator/objects/global/scripts/list-categories.sh
+execute = sh /usr/lib/alterator-module-categories/list-categories
 stdout_strings = enabled
 action_id = List
