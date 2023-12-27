@@ -33,6 +33,7 @@ install -v -p -m 755 -D list-categories %buildroot%_libexecdir/%name
 
 %files
 %_sysconfdir/alterator/backends/categories.backend
+%dir %_libexecdir/%name
 %_libexecdir/%name/category-info
 %_libexecdir/%name/list-categories
 %_datadir/dbus-1/interfaces/ru.basealt.alterator.categories.xml
