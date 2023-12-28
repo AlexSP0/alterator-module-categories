@@ -21,8 +21,17 @@ content=$(cat $file)
 new_body=$(echo "$content" |
 	tail -n +2)
 
+weight=500
+name=$(sed -n -e "s/^\s*Name\s*=\s*\(.*\)/\1/p" "$file" | head -n 1 | xargs)
+[ "$name" = "System" ] && weight=1000
+[ "$name" = "Users" ] && weight=990
+[ "$name" = "Network" ] && weight=980
+[ "$name" = "Graphical interface" ] && weight=970
+[ "$name" = "Firewall" ] && weight=960
+
 output="[Alterator Entry]"
 output=$(echo -e "$output\n$new_body")
+output=$(echo -e "$output\nWeight=$weight")
 output=$(echo -e "$output" | sed "s/\(\s*Type\s*=\s*\).*/\1Category/i")
 
 echo "$output"
